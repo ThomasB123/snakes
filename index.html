@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>snakes</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <!--<script type="text/javascript" src="libraries/p5.js"></script>-->
+    <!--<script type="text/javascript" src="libraries/p5.dom.js"></script>-->
+    <!--<script type="text/javascript" src="libraries/p5.sound.js"></script>-->
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="snake.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var boxUp = document.getElementById("boxUp");
+            var boxDown = document.getElementById("boxDown");
+            var snakeUp = document.getElementById("snakeUp");
+            var snakeDown = document.getElementById("snakeDown");
+            var cellUp = document.getElementById("cellUp");
+            var cellDown = document.getElementById("cellDown");
+            var gridUp = document.getElementById("gridUp");
+            var gridDown = document.getElementById("gridDown");
+            var speedUp = document.getElementById("speedUp");
+            var speedDown = document.getElementById("speedDown");
+
+            function increaseBoxes() {
+                incrementBoxes();
+            }
+
+            function decreaseBoxes() {
+                decrementBoxes();
+            }
+
+            function increaseSnakes() {
+                incrementSnakes();
+            }
+
+            function decreaseSnakes() {
+                decrementSnakes();
+            }
+
+            function increaseCell() {
+                incrementCell();
+            }
+
+            function decreaseCell() {
+                decrementCell();
+            }
+
+            function increaseGrid() {
+                incrementGrid();
+            }
+
+            function decreaseGrid() {
+                decrementGrid();
+            }
+
+            function increaseSpeed() {
+                incrementSpeed();
+            }
+
+            function decreaseSpeed() {
+                decrementSpeed();
+            }
+            boxUp.addEventListener("click", increaseBoxes);
+            boxDown.addEventListener("click", decreaseBoxes);
+            snakeUp.addEventListener("click", increaseSnakes);
+            snakeDown.addEventListener("click", decreaseSnakes);
+            cellUp.addEventListener("click", increaseCell);
+            cellDown.addEventListener("click", decreaseCell);
+            gridUp.addEventListener("click", increaseGrid);
+            gridDown.addEventListener("click", decreaseGrid);
+            speedUp.addEventListener("click", increaseSpeed);
+            speedDown.addEventListener("click", decreaseSpeed);
+        });
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        canvas {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Form Controls -->
+    Number of boxes:
+    <button id="boxUp">Up</button>
+    <button id="boxDown">Down</button> Number of snakes per box:
+    <button id="snakeUp">Up</button>
+    <button id="snakeDown">Down</button> Pixel Size:
+    <button id="cellUp">Up</button>
+    <button id="cellDown">Down</button> Number of pixels:
+    <button id="gridUp">Up</button>
+    <button id="gridDown">Down</button> Speed of snakes:
+    <button id="speedUp">Up</button>
+    <button id="speedDown">Down</button>
+    <br>
+    <!--This line break ensures that sketch appears below controls-->
+</body>
+
+</html>
